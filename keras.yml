@@ -1,0 +1,9 @@
+name: keras
+dependencies:
+  - python==3.6.8
+  - pip==19.3.1
+  - anaconda::keras=2.2.4
+  - anaconda::tensorflow-gpu=1.15.0
+  - anaconda::numpy=1.17.3
+  - pip:
+    - mnist
