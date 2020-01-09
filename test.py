@@ -54,10 +54,10 @@ Very good
 
 model = Sequential([
   MaxPooling2D(pool_size=(2, 2), input_shape=input_shape),
-  Conv2D(10, kernel_size=(3, 3), activation='relu',padding='same'),
+  Conv2D(6, kernel_size=(3, 3), activation='relu',padding='same'),
   
   MaxPooling2D(pool_size=(4, 4)),
-  Conv2D(10, kernel_size=(2, 2), activation='relu',padding='same'),
+  Conv2D(8, kernel_size=(2, 2), activation='relu',padding='same'),
   
   MaxPooling2D(pool_size=(2, 2)),
   Conv2D(10, kernel_size=(1, 1), activation='softmax',padding='same'),
@@ -79,7 +79,7 @@ model.fit(
   train_images,
   to_categorical(train_labels),
   epochs=12,
-  batch_size=32,
+  batch_size=16,
 )
 
 test_result = model.evaluate(
