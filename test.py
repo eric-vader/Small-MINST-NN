@@ -82,6 +82,15 @@ model.fit(
   batch_size=16,
 )
 
+w = model.get_weights()
+min_w = []
+max_w = []
+for ea_w in w:
+    min_w.append(np.min(ea_w))
+    max_w.append(np.max(ea_w))
+print(np.min(min_w))
+print(np.min(max_w))
+
 test_result = model.evaluate(
   test_images,
   to_categorical(test_labels)
